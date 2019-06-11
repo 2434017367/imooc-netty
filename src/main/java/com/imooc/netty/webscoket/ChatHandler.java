@@ -30,7 +30,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         }
 
         // 下面这个方法，和上面的for循环，一致
-        clients.writeAndFlush(new TextWebSocketFrame("[服务器在]" + LocalDateTime.now() + "接收到消息, 消息为：" + content));
+//        clients.writeAndFlush(new TextWebSocketFrame("[服务器在]" + LocalDateTime.now() + "接收到消息, 消息为：" + content));
 
     }
 
