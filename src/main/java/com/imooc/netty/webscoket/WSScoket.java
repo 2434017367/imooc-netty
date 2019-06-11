@@ -16,7 +16,7 @@ public class WSScoket {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(mainGroup, subGroup)
                             .channel(NioServerSocketChannel.class)
-                            .childHandler(null);
+                            .childHandler(new WSServerInitialzer());
 
             ChannelFuture channelFuture = serverBootstrap.bind(8088).sync();
             channelFuture.channel().closeFuture().sync();
